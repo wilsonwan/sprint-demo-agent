@@ -1,0 +1,12 @@
+{
+  "id": "add-todos",
+  "title": "Adding and completing todos",
+  "url": "fixtures/todomvc.html",
+  "targetDurationMs": 12000,
+  "steps": [
+    { "act": "Type \"Buy milk\" into the new todo input and press Enter", "narrationCue": "First, we add a todo." },
+    { "act": "Type \"Walk the dog\" into the new todo input and press Enter", "narrationCue": "Then another." },
+    { "act": "Tick the checkbox next to \"Buy milk\"", "narrationCue": "Ticking it off updates the counter." }
+  ],
+  "assert": "The todo \"Buy milk\" is crossed out and the footer says 1 item left"
+}

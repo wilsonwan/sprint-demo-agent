@@ -1,0 +1,55 @@
+midsceneVersion: 1.15.4
+cacheId: whaleshark-settings
+caches:
+  - type: plan
+    prompt: Click the Settings gear icon at the bottom left of the sidebar
+    yamlWorkflow: |
+      tasks:
+        - name: Click the Settings gear icon at the bottom left of the sidebar
+          flow:
+            - aiTap: ''
+              locate: Settings gear icon at the bottom left of the sidebar
+  - type: plan
+    prompt: Click "Appearance" in the settings navigation
+    yamlWorkflow: |
+      tasks:
+        - name: Click "Appearance" in the settings navigation
+          flow:
+            - aiTap: ''
+              locate: Appearance item in the settings navigation sidebar
+  - type: plan
+    prompt: Click "Skills" in the settings navigation
+    yamlWorkflow: |
+      tasks:
+        - name: Click "Skills" in the settings navigation
+          flow:
+            - aiTap: ''
+              locate: Skills item in the settings navigation sidebar
+  - type: plan
+    prompt: Click "MCP servers" in the settings navigation
+    yamlWorkflow: |
+      tasks:
+        - name: Click "MCP servers" in the settings navigation
+          flow:
+            - aiTap: ''
+              locate: MCP servers navigation item in the settings sidebar
+  - type: locate
+    prompt: Settings gear icon at the bottom left of the sidebar
+    cache:
+      xpaths:
+        - /html/body/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/nav[1]/div[3]/div[1]/button[1]/span[2]
+  - type: locate
+    prompt: Appearance item in the settings navigation sidebar
+    cache:
+      xpaths:
+        - /html/body/div[2]/div[3]/nav[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[4]/button[1]/span[1]
+  - type: locate
+    prompt: Skills item in the settings navigation sidebar
+    cache:
+      xpaths:
+        - /html/body/div[2]/div[3]/nav[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[8]/button[normalize-space()="SkillsSkills"]
+  - type: locate
+    prompt: MCP servers navigation item in the settings sidebar
+    cache:
+      xpaths:
+        - /html/body/div[2]/div[3]/nav[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[9]/button[1]/span[1]

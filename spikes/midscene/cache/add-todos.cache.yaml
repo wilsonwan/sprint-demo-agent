@@ -1,0 +1,46 @@
+# Hand-written stand-in for what `rehearse` writes after a real model run,
+# used to prove a take replays with zero model calls. A real rehearsal
+# overwrites this file.
+midsceneVersion: 1.15.4
+cacheId: add-todos
+caches:
+  - type: plan
+    prompt: Type "Buy milk" into the new todo input and press Enter
+    yamlWorkflow: |
+      tasks:
+        - name: Type "Buy milk" into the new todo input and press Enter
+          flow:
+            - aiInput: the new todo input
+              value: Buy milk
+            - aiKeyboardPress: Enter
+  - type: plan
+    prompt: Type "Walk the dog" into the new todo input and press Enter
+    yamlWorkflow: |
+      tasks:
+        - name: Type "Walk the dog" into the new todo input and press Enter
+          flow:
+            - aiInput: the new todo input
+              value: Walk the dog
+            - aiKeyboardPress: Enter
+  - type: plan
+    prompt: Tick the checkbox next to "Buy milk"
+    yamlWorkflow: |
+      tasks:
+        - name: Tick the checkbox next to "Buy milk"
+          flow:
+            - aiTap: the checkbox next to "Buy milk"
+  - type: locate
+    prompt: the new todo input
+    cache:
+      xpaths:
+        - /html/body/main/input
+  - type: locate
+    prompt: the new todo input
+    cache:
+      xpaths:
+        - /html/body/main/input
+  - type: locate
+    prompt: the checkbox next to "Buy milk"
+    cache:
+      xpaths:
+        - /html/body/main/ul/li[1]/input

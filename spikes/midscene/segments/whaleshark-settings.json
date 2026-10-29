@@ -1,0 +1,14 @@
+{
+  "id": "whaleshark-settings",
+  "title": "Finding your way around Settings",
+  "url": "${WHALESHARK_WEB_URL}/?token=${WHALESHARK_WEB_TOKEN}",
+  "readyText": "Welcome to Whaleshark",
+  "targetDurationMs": 16000,
+  "steps": [
+    { "act": "Click the Settings gear icon at the bottom left of the sidebar", "narrationCue": "Settings lives in the sidebar footer." },
+    { "act": "Click \"Appearance\" in the settings navigation", "narrationCue": "Appearance holds the colors and themes." },
+    { "act": "Click \"Skills\" in the settings navigation", "narrationCue": "Skills are shared across your machines." },
+    { "act": "Click \"MCP servers\" in the settings navigation", "narrationCue": "And so are MCP servers." }
+  ],
+  "assert": "The settings window is open and showing the MCP servers page"
+}

@@ -1,0 +1,14 @@
+node_modules/
+spikes/midscene/out/
+spikes/midscene/midscene_run/
+spikes/midscene/tts/.venv/
+agent/data/
+agent/tts/.venv/
+agent/web/dist/
+agent/targets.json
+agent/.env
+
+# Local media (reference videos, voice samples)
+/*.mp4
+/*.wav
+/.env

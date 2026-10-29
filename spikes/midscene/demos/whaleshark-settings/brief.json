@@ -1,0 +1,14 @@
+{
+  "product": "Whaleshark",
+  "audience": "The team's sprint review: developers and the product owner, who know Whaleshark but not this sprint's work.",
+  "notes": [
+    "Whaleshark is a development environment that runs Pi coding agents on machines you own. You use it from a desktop or web client.",
+    "This sprint's work: Settings is a single window opened from the gear in the sidebar footer, with every page listed in one navigation rail.",
+    "The rail lists Overview, Connections, Hub, Appearance, Notifications, Providers, Agents, Skills, MCP servers, Text and prompts, Worktrees, Quick commands, Projects, Telemetry, Feature flags and Archive.",
+    "Appearance shows the color scheme (System, Light, Dark) and the themes.",
+    "Skills and MCP servers are kept per machine and shared across the machines you connect.",
+    "The demo runs on a web client acting as a hub with no machines connected, so the Skills and MCP servers pages show loading placeholders, not a list. Do not describe their contents.",
+    "Next sprint: populating Skills and MCP servers from connected machines in the demo, and covering more pages."
+  ],
+  "segments": ["segments/whaleshark-settings.json"]
+}

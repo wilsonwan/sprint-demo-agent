@@ -1,0 +1,24 @@
+[
+  {
+    "id": "todomvc",
+    "label": "TodoMVC (local fixture)",
+    "appUrl": "file://${AGENT_DIR}/fixtures/todomvc.html",
+    "readyText": "todos"
+  },
+  {
+    "id": "qa",
+    "label": "QA",
+    "appUrl": "https://qa.example.com/app/",
+    "readyText": "Dashboard",
+    "session": {
+      "loginUrl": "https://qa.example.com/app/login?returnUrl=/",
+      "checkUrl": "https://qa.example.com/app/api/session",
+      "envFile": "/path/to/your-app/playwright/.env",
+      "usernameVar": "TEST_USERNAME",
+      "passwordVar": "TEST_PASSWORD",
+      "usernameSelector": "#email",
+      "passwordSelector": "#password",
+      "submitSelector": "button[type=submit]"
+    }
+  }
+]

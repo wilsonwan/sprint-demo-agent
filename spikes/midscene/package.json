@@ -1,0 +1,18 @@
+{
+  "name": "midscene-spike",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "record": "tsx src/record-segment.ts"
+  },
+  "dependencies": {
+    "@midscene/web": "1.15.4",
+    "@playwright/test": "1.63.0",
+    "playwright": "1.63.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "tsx": "4.19.2",
+    "typescript": "5.6.3"
+  }
+}

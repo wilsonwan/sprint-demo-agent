@@ -1,0 +1,10 @@
+# Host-only and generated files: never in the image.
+node_modules
+web/node_modules
+web/dist
+tts/.venv
+data
+targets.json
+.env
+Dockerfile
+.dockerignore

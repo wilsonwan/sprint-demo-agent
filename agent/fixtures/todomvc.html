@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TodoMVC (fixture)</title>
+<style>
+  body { font: 16px/1.4 system-ui, sans-serif; background: #f5f5f5; margin: 0; }
+  main { width: 520px; margin: 80px auto; background: #fff; box-shadow: 0 2px 8px #0002; }
+  h1 { text-align: center; color: #b83f45; font-weight: 200; font-size: 64px; margin: 0; padding: 16px; }
+  .new-todo { box-sizing: border-box; width: 100%; padding: 16px; font-size: 22px; border: 0; border-bottom: 1px solid #eee; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid #eee; font-size: 22px; }
+  li.completed label { text-decoration: line-through; color: #999; }
+  footer { padding: 10px 16px; color: #777; font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>todos</h1>
+  <input class="new-todo" placeholder="What needs to be done?" autofocus>
+  <ul class="todo-list"></ul>
+  <footer><span class="todo-count">0 items left</span></footer>
+</main>
+<script>
+  const input = document.querySelector('.new-todo');
+  const list = document.querySelector('.todo-list');
+  const count = document.querySelector('.todo-count');
+  const refresh = () => {
+    const left = list.querySelectorAll('li:not(.completed)').length;
+    count.textContent = `${left} item${left === 1 ? '' : 's'} left`;
+  };
+  input.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter' || !input.value.trim()) return;
+    const li = document.createElement('li');
+    li.innerHTML = '<input class="toggle" type="checkbox"><label></label>';
+    li.querySelector('label').textContent = input.value.trim();
+    li.querySelector('.toggle').addEventListener('change', (ev) => {
+      li.classList.toggle('completed', ev.target.checked);
+      refresh();
+    });
+    list.append(li);
+    input.value = '';
+    refresh();
+  });
+</script>
+</body>
+</html>

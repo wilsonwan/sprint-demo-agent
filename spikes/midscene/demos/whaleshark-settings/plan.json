@@ -1,0 +1,63 @@
+{
+  "product": "Whaleshark",
+  "title": "Settings in One Window",
+  "summary": "Settings opens from the sidebar gear with every page reachable from a single navigation rail.",
+  "tags": [
+    "Sprint demo",
+    "Web client"
+  ],
+  "stats": [
+    {
+      "value": "4",
+      "label": "Pages visited"
+    },
+    {
+      "value": "16",
+      "label": "Pages in the rail"
+    }
+  ],
+  "titleNarration": "Welcome to this sprint's Whaleshark demo, where we walk through the new Settings window.",
+  "proves": {
+    "subtitle": "A short walk through the new Settings window",
+    "cards": [
+      {
+        "title": "One entry point",
+        "text": "The gear in the sidebar footer opens Settings as a single window."
+      },
+      {
+        "title": "One navigation rail",
+        "text": "Every settings page, from Overview to Archive, is listed in one rail."
+      },
+      {
+        "title": "Appearance at a glance",
+        "text": "The Appearance page shows the color scheme choices and the themes."
+      },
+      {
+        "title": "Shared by design",
+        "text": "Skills and MCP servers are kept per machine and shared across the machines you connect."
+      }
+    ],
+    "outcome": "Demo outcome: Settings is a single window where every page is one click away in the rail.",
+    "narration": "This demo proves that Settings is now one window, opened from the gear in the sidebar footer, with every page listed in a single navigation rail. We visit Appearance, then Skills and MCP servers, which are kept per machine and shared across the machines you connect."
+  },
+  "steps": [
+    {
+      "segment": "segments/whaleshark-settings.json",
+      "title": "Step 1: Finding your way around Settings",
+      "subtitle": "From the sidebar gear to every settings page",
+      "narration": [
+        "We start by clicking the gear icon at the bottom left of the sidebar.",
+        "Next we click Appearance in the navigation rail to open its page.",
+        "Then we click Skills in the same rail to visit that page.",
+        "Finally we click MCP servers, leaving the window open on that page."
+      ]
+    }
+  ],
+  "close": {
+    "message": "Settings is now one window with one rail, so every page is a single click away.",
+    "delivered": "A single Settings window with a full navigation rail, opened from the sidebar gear.",
+    "next": "Next sprint we populate Skills and MCP servers from connected machines and cover more pages.",
+    "value": "You can reach any setting without hunting through separate dialogs.",
+    "narration": "That is the new Settings for this sprint. One window, one rail, and every page a single click away. Next sprint we will populate Skills and MCP servers from connected machines and walk through more pages. Thanks for watching."
+  }
+}

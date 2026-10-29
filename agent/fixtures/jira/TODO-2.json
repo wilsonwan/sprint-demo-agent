@@ -1,0 +1,6 @@
+{
+  "key": "TODO-2",
+  "summary": "Complete a todo with its checkbox",
+  "description": "Each todo has a checkbox. Ticking it crosses the todo out and lowers the items-left count in the footer.",
+  "acceptance": ["Ticking a todo's checkbox crosses it out", "The items-left count goes down by one"]
+}

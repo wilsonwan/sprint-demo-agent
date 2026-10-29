@@ -1,0 +1,25 @@
+# The agent in Docker. Settings come from a .env file next to this one (see .env.docker.example).
+#   docker compose up -d --build       then open http://localhost:4400
+services:
+  agent:
+    build: ./agent
+    image: sprint-demo-agent
+    init: true # forwards Ctrl+C / docker stop to the agent so it closes cleanly
+    stop_grace_period: 60s
+    shm_size: 1gb # Chromium needs more shared memory than Docker's default 64 MB
+    ports:
+      - "127.0.0.1:${PORT:-4400}:4400" # this machine only; teammates come in through Share
+    env_file:
+      - path: ./agent/.env # DEMO_BLOCKED_HOSTS, model overrides, Jira token (optional)
+        required: false
+    volumes:
+      - agent-data:/app/data
+      # Pi's logins (Copilot, Atlassian MCP), read-only: the agent never writes them.
+      - ${PI_AGENT_DIR:-~/.pi/agent}:/home/node/.pi/agent:ro
+      - ./agent/targets.json:/app/targets.json:ro
+      # The env file with the app's test username and password, at the same path as on the host
+      # so targets.json works unchanged. Leave unset if no environment logs in.
+      - ${APP_ENV_FILE:-./agent/.env.example}:${APP_ENV_FILE:-/app/.env.example}:ro
+
+volumes:
+  agent-data:

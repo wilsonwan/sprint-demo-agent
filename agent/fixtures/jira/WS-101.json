@@ -1,0 +1,10 @@
+{
+  "key": "WS-101",
+  "summary": "Settings opens as one window with a navigation rail",
+  "description": "Settings used to be spread over several dialogs. Make Settings a single window, opened from the gear icon in the sidebar footer, with every settings page listed in one navigation rail on the left.",
+  "acceptance": [
+    "Clicking the gear in the sidebar footer opens the Settings window on its Overview page",
+    "The rail lists every settings page, from Overview to Archive",
+    "Clicking a page in the rail shows that page without closing the window"
+  ]
+}

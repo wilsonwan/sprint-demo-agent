@@ -1,0 +1,6 @@
+{
+  "key": "TODO-1",
+  "summary": "Add todos from the input at the top of the list",
+  "description": "Users can type a todo into the \"What needs to be done?\" input and press Enter to add it to the list. The footer counts the items left.",
+  "acceptance": ["Pressing Enter adds the typed todo to the list", "The input clears after adding", "The footer shows how many items are left"]
+}

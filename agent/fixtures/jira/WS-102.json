@@ -1,0 +1,9 @@
+{
+  "key": "WS-102",
+  "summary": "Appearance page: color scheme and themes",
+  "description": "Add an Appearance page to Settings with the color scheme (System, Light, Dark) and the installed themes. Note for demos: on a hub with no machines connected, the Skills and MCP servers pages only show loading placeholders, so don't describe their contents.",
+  "acceptance": [
+    "Appearance shows System, Light and Dark color schemes",
+    "Appearance lists the installed themes"
+  ]
+}
